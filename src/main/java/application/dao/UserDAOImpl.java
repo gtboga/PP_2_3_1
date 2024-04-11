@@ -1,11 +1,10 @@
 package application.dao;
 
 import application.model.User;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
@@ -24,8 +23,6 @@ public class UserDAOImpl implements UserDAO{
         entityManager.persist(user);
         entityManager.flush();
     }
-
-
 
     @Override
     public void updateUser(int id, User user) {
